@@ -9,20 +9,14 @@ Activity Tracker is an API built using Spring Boot and PostgreSQL that allows us
 <li>Postman</li>
 
 <h2>Tasks</h2>
-<li>POST /api/tasks: Create a new task with the provided title, description, and status. Returns the created task with a unique ID.</li>
-<li>GET /api/tasks: Get a list of all tasks.</li>
-<li>GET /api/tasks/{taskId}: Get the task with the specified ID.</li>
-<li>GET /api/tasks/pending: Get a list of all pending tasks.</li>
-<li>GET /api/tasks/done: Get a list of all tasks marked as done.</li>
-<li>GET /api/tasks/inprogress: Get a list of all tasks marked as in progress.</li>
-<li>PUT /api/tasks/{taskId}: Update the task with the specified ID. Only the title, description, and status can be updated.
-</li>
-<li>DELETE /api/tasks/{taskId}: Delete the task with the specified ID.</li>
+<li>POST /api/v1/activity-tracker/create-task: Create a new task with the provided title, description, and status. Returns the created task with a unique ID.</li>
+<li>GET /api/v1/activity-tracker/my-tasks: Get a list of all tasks.</li>
+<li>GET /api/v1/activity-tracker/task/{taskId}: Get the task with the specified ID.</li>
+<li>GET /api/v1/activity-tracker/my-tasks/{status}: Get a list of tasks by status.</li>
+<li>PUT /api/v1/activity-tracker/update-task-title-description/{taskId}: Update the task title description with the specified ID.</li>
+<li>PUT /api/v1/activity-tracker/update-task-status/{taskId}: Update the task status with the specified ID.</li>
+<li>DELETE /api/tasks//delete-task/{taskId}: Delete the task with the specified ID.</li>
 
-<h2>Task Status</h2>
-<li>PUT /api/tasks/{taskId}/pending: Move the task with the specified ID to pending status.</li>
-<li>PUT /api/tasks/{taskId}/done: Move the task with the specified ID to done status.</li>
-<li>PUT /api/tasks/{taskId}/inprogress: Move the task with the specified ID to in progress status.</li>
 
 
 <h2>Conclusion</h2>
